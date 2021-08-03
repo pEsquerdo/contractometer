@@ -25,10 +25,10 @@ class TimeTrackersController < ApplicationController
 
     respond_to do |format|
       if @time_tracker.save
-        format.html { redirect_to @time_tracker, notice: 'Time tracker was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Time tracker was successfully created.' }
         format.json { render :show, status: :created, location: @time_tracker }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { render root_path, status: :unprocessable_entity }
         format.json { render json: @time_tracker.errors, status: :unprocessable_entity }
       end
     end

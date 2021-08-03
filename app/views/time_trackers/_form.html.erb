@@ -1,10 +1,10 @@
 <%= turbo_frame_tag "time_tracker_form" do %>
   <%= form_with(model: time_tracker) do |form| %>
     <div class="row my-2">
-      <div class="col-10">
+      <div class="col-8 col-lg-9">
         <%= form.text_field :topic, class: 'form-control', placeholder: 'What are you working on?' %>
       </div>
-      <div class="col-1">
+      <div class="col-3 col-lg-2">
         <%= form.text_field :rate_per_hour, class: 'form-control', placeholder: 'rate/h' %>
       </div>
       <div class="col-1">

@@ -11,8 +11,6 @@ export default class extends Controller {
   }
 
   load() {
-    this.startDate = new Date(this.startValue);
-
     if (this.hasRefreshIntervalValue) {
       this.startRefreshing();
     }

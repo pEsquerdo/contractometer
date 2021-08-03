@@ -1,14 +1,12 @@
 <%= turbo_stream_from :time_trackers %>
-
 <%= render 'form', time_tracker: @time_tracker %>
-
 <hr>
+<div class="fw-bold row my-2">
+  <div class="col-7">Topic</div>
+  <div class="col-2">Rate per hour</div>
+  <div class="col-2">Duration</div>
+  <div class="col-1">Status</div>
+</div>
 <%= turbo_frame_tag :time_trackers do %>
-  <div class="fw-bold row my-2">
-    <div class="col-7">Topic</div>
-    <div class="col-2">Rate per hour</div>
-    <div class="col-2">Duration</div>
-    <div class="col-1">Status</div>
-  </div>
   <%= render @time_trackers %>
 <% end %>
