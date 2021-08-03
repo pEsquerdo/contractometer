@@ -1,12 +1,12 @@
 <%= turbo_frame_tag dom_id(time_tracker) do %>
   <div class="row my-2">
-    <div class="col-8">
+    <div class="col-7">
       <%= time_tracker.topic %>
     </div>
     <div class="col-2">
       <%= time_tracker.rate_per_hour %>
     </div>
-    <div class="col-1">
+    <div class="col-2">
       <% if time_tracker.running? %>
         <div data-controller="timer"
             data-timer-start-value='<%= time_tracker.started_at.to_i * 1000 %>'
